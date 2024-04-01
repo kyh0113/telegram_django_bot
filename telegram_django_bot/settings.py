@@ -1,3 +1,4 @@
+import os
 """
 Django settings for telegram_django_bot project.
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-xyoitv)ltgvmygytvb+jd*de*0oe+u24*k498eawqbc-=a3dr7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # 도메인 네임을 제대로 정의해야함 원래는
 
 
 # Application definition
@@ -122,3 +123,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
