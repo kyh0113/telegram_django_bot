@@ -3,10 +3,10 @@
 import telegram 
 from pprint import pprint
 
-TELEGRAM_TOKEN = "6983964934:AAFD4D7FCtRfV5jNEn_n_ZRq6uz-_DVFXj4" 
+TELEGRAM_TOKEN = "7180197799:AAEygHj3aUNpLQke0cuYHraeRcVb4AKDWUc" 
 
 bot = telegram.Bot(token = TELEGRAM_TOKEN)
-bot.set_webhook("https://80ac-61-73-58-84.ngrok-free.app/blog/webhook/")
+bot.set_webhook("https://1f63-61-73-58-84.ngrok-free.app/blog/webhook/")
 
 # for update in bot.getUpdates():
 #     received_text = update.message.text
@@ -17,4 +17,5 @@ bot.set_webhook("https://80ac-61-73-58-84.ngrok-free.app/blog/webhook/")
 
 #     chat_id = update.message.chat.id # 가장 최근에 온 메세지의 chat id를 가져온다.
 #     bot.sendMessage(chat_id=chat_id, text=text)
+    
     
