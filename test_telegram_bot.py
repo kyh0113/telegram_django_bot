@@ -6,7 +6,7 @@ from pprint import pprint
 TELEGRAM_TOKEN = "7180197799:AAEygHj3aUNpLQke0cuYHraeRcVb4AKDWUc" 
 
 bot = telegram.Bot(token = TELEGRAM_TOKEN)
-bot.set_webhook("https://1f63-61-73-58-84.ngrok-free.app/blog/webhook/")
+bot.set_webhook("https://6479-61-73-58-84.ngrok-free.app/blog/webhook/")
 
 # for update in bot.getUpdates():
 #     received_text = update.message.text
