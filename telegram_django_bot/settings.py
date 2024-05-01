@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'telegram_django_bot.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vqachatbot',
+        'USER' :'root',
+        'PASSWORD' :'3525',
+        'PPRT' : 3306,
+        'HOST' : '127.0.0.1',
     }
 }
 

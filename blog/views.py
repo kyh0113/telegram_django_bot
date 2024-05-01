@@ -13,6 +13,8 @@ def index(request):
 @csrf_exempt
 def webhook(request):
     json_string = request.body
+    print("안녕안녕 request는 문제없어")
+    print(json_string)
     telegram_update = json.loads(json_string)
     received_text = telegram_update['message']['text']
     chat_id = telegram_update['message']['chat']['id']
@@ -31,6 +33,15 @@ def webhook(request):
         bot.sendMessage(chat_id=chat_id, text=start_message3)
         bot.sendMessage(chat_id=chat_id, text=start_message4)
         bot.sendMessage(chat_id=chat_id, text=start_message5)
+
+
+    elif received_text =='/사용방법':
+        start_message1 = "[사용방법]\n\n1. 이미지 업로드\n2. 이미지에 대한 질문 입력\n3. 질문에 대한 답 입력\n\n*최소 7개의 질문과 답을 입력해야 합니다. 사진으로 판단할 수 있는 질문을 입력해야하며, 올바른 답을 입력해주세요.\n\n*질문은 반드시 '?'로 끝나도록 작성하셔야 합니다. 질문 다음에 입력하는 것을 해당 질문에 대한 답입니다.\n\n*챗봇 사용 중 사용방법이 다시 궁금하시다면 '/사용방법'을 입력해주세요."
+        start_message2 = "[이미지 전송방법]\n\n이미지는 다음과 같은 방법으로 전송해주세요. \nandroid) 첨부파일->파일->갤러리(압축없이 사진 보내기) \nios) 첨부파일->파일->사진 및 동영상 \nweb) 'send file'을 통해서 이미지 전송"
+        
+        bot.sendMessage(chat_id=chat_id, text=start_message1)
+        bot.sendMessage(chat_id=chat_id, text=start_message2)
+
 
     else:
         text = "ECHO) " + received_text
