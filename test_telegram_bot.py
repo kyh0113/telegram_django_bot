@@ -6,7 +6,7 @@ from telegram_django_bot import settings
 
 
 bot = telegram.Bot(token=settings.TELEGRAM_TOKEN)
-bot.set_webhook("https://cd63-61-73-58-84.ngrok-free.app/blog/webhook/")
+bot.set_webhook("https://938d-49-167-206-119.ngrok-free.app/blog/webhook/")
 
 # for update in bot.getUpdates():
 #     received_text = update.message.text
