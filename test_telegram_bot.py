@@ -2,11 +2,11 @@
 
 import telegram 
 from pprint import pprint
+from telegram_django_bot import settings
 
-TELEGRAM_TOKEN = "6962723549:AAGVh6clwQQOSYquMg0CeFBro_3Cfr3i95A" 
 
-bot = telegram.Bot(token = TELEGRAM_TOKEN)
-bot.set_webhook("https://4c88-61-73-58-84.ngrok-free.app/blog/webhook/")
+bot = telegram.Bot(token=settings.TELEGRAM_TOKEN)
+bot.set_webhook("https://cd63-61-73-58-84.ngrok-free.app/blog/webhook/")
 
 # for update in bot.getUpdates():
 #     received_text = update.message.text

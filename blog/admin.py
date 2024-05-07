@@ -10,7 +10,7 @@ class IMAGEAdmin(admin.ModelAdmin):
     search_fields = ['IMAGE_ID', 'WORKER_ID', 'STATUS', 'DATE_WORK']
 
 class QUESTIONAdmin(admin.ModelAdmin):
-    list_display = ['QUESTION_ID', 'IMAGE_ID', 'QUESTION', 'STATUS' ,'QUESTION_CNT']
+    list_display = ['QUESTION_ID', 'IMAGE_ID', 'QUESTION', 'QUESTION_CNT']
     serach_fields = ['IMAGE_ID']
 
 class ANSWERAdmin(admin.ModelAdmin):
